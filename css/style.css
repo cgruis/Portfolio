@@ -1,0 +1,62 @@
+.logo {
+  width: 130px;
+}
+
+.banner {
+  width: 100%;
+}
+
+#featured-projects{
+  text-align: center;
+}
+
+#projects {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.card-img-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.3);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.card-img-wrap img {
+  transition: transform .25s;
+  width: 100%;
+}
+.card-img-wrap:hover img {
+  transform: scale(1.2);
+}
+.card-img-wrap:hover:after {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 770px) {
+  header h1 {
+    font-size: 22px;
+  }
+  header h4 {
+    font-size: 16px;
+  }
+  .logo-img {
+    width: 80px;
+  }
+  .overlay-container {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    max-width: 32%;
+    justify-content: space-between;
+  }
+}
